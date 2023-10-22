@@ -20,27 +20,11 @@ export const series: Serie[] = [
         "https://www.bbc.co.uk/programmes/p065smy4", "documents/AveryEnglishScandal.jpg"),
   ];
 
-
-  let serieTable: HTMLElement = document.getElementById("serie")!;
   let estadisticasTable : HTMLElement = document.getElementById("estadisticas")!;
   let cursosTable: HTMLElement = document.getElementById("cursos")!;
 
-  for (const serie of series) {
-    mostrarDatosSerie(serie);
-    }
     mostrarCursos(series);
     mostrarEstadisticas(series);
-
-  function mostrarDatosSerie(serie : Serie): void{
-    let tbodySerie = document.createElement("tbody");
-    tbodySerie.innerHTML = `<tr><td>Nombre:</td><td>${serie.name}</td></tr>
-                            <tr><td>Channel:</td><td>${serie.channel}</td></tr>
-                            <tr><td>Seasons:</td><td>${serie.seasons}</td></tr>
-                            <tr><td>Description:</td><td>${serie.description}</td></tr>
-                            <tr><td>Webpage:</td><td>${serie.webpage}</td></tr>
-                            <tr><td>Image:</td><td><img src="${serie.image}" width="200" height="200"></td></tr>`;
-    serieTable.appendChild(tbodySerie);
-  }
 
   function mostrarEstadisticas(array: Serie[]):void{
     let numeroElementos: number = 0;
